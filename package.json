@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/caep2015/Express-Session-Login/issues"
   },
-  "homepage": "https://github.com/caep2015/Express-Session-Login#readme"
+  "homepage": "https://github.com/caep2015/Express-Session-Login#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2"
+  }
 }
