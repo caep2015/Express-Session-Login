@@ -2,19 +2,9 @@ const express = require('express');
 const session = require('express-session');
 const mustacheExpress = require('mustache-express');
 const bodyParser = require('body-parser');
+const 
 
 var app = express();
-
-let randomImage = function() {
-  var images = ["http://www.fillmurray.com/200/300", "https://images-na.ssl-images-amazon.com/images/I/41oq%2BCg32iL._SY300_.jpg"];
-  let randomIndex = (Math.random() > 0.5) ? 1 : 0;
-  return images[randomIndex];
-};
-
-let captcha = {
-  'http://www.fillmurray.com/200/300': 'billmurray',
-  'https://images-na.ssl-images-amazon.com/images/I/41oq%2BCg32iL._SY300_.jpg': 'notbillmurray'
-}
 
 // Configure mustache
 app.engine('mustache', mustacheExpress());
@@ -76,5 +66,5 @@ app.post('/logout', function (req, res) {
 });
 
 app.listen(3000, function() {
-  console.log('Catch-a-Murray started on port 3000...');
+  console.log('Login page started on port 3000...');
 });

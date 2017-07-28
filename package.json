@@ -22,6 +22,9 @@
   "homepage": "https://github.com/caep2015/Express-Session-Login#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express-validator": "^3.2.1"
+    "express": "^4.15.3",
+    "express-session": "^1.15.4",
+    "express-validator": "^3.2.1",
+    "mustache-express": "^1.2.5"
   }
 }
