@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>Log In</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
-  <body>
-    <div class="wrapper">
-      <form action="login" method="POST">
-        <div class="header">
-          <span class="title">Please log in</span>
-        </div>
-        <div class="">
-          {{ #random }}
-            <img src="{{.}}">
-          {{ /random }}
-          <button>Log me in.</button>
-        </div>
-      </form>
-    </div>
+  <body class="container">
+    <h1>Please Log In</h1>
+    <form class="form-group" action="" method="post">
+      <div class="">
+        Username: <input type="text" name="username" value="" placeholder="Carlota" class="form-control">
+      </div>
+      <div class="">
+        Password: <input type="password" name="password" value="" placeholder="codegirl" class="form-control">
+      </div>
+      <input type="submit" name="" value="Log in" class="btn btn-success">
+      <br>
+      <input type="submit" name="create" value="Sign Up" class="btn btn-succss">
+    </form>
   </body>
 </html>

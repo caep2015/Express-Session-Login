@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body class="container">
+    <h1>Welcome! {{ username }} You are logged in!</h1>
+    <h3>You've visited {{views}} times!</h3>
+
+    <form class="logout" action='/logout' method="post">
+      <input type="submit" name="logout" value="Log Out" class="btn btn-success">
+    </form>
+  </body>
+</html>
