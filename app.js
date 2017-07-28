@@ -2,7 +2,6 @@ const express = require('express');
 const session = require('express-session');
 const mustacheExpress = require('mustache-express');
 const bodyParser = require('body-parser');
-const 
 
 var app = express();
 
@@ -22,6 +21,10 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
+// username
+const user = [
+  {'username':'Carlota', 'password': 'codegirl'}
+];
 
 // Authentication and Authorization Middleware
 var auth = function(req, res, next) {
@@ -42,21 +45,19 @@ app.get('/', function (req, res) {
 
 // Login endpoint
 app.get('/login', function (req, res) {
-  res.render('login', { random: randomImage });
+  res.render('login');
 });
 
 app.post('/login', function (req, res) {
-  let correctAnswer = captcha[req.body.displayedImg];
-  if (req.body.guess === correctAnswer) {
-    req.session.user = "bill";
+  if (req.body.username === user.username && req.body.password === user.password) {
     req.session.admin = true;
-    res.redirect('/content');
+    res.redirect('/');
   }
 });
 
 // // Get content endpoint
 app.get('/content', auth, function (req, res) {
-    res.render('secret-murray');
+    res.render('content');
 });
 
 // Logout endpoint
