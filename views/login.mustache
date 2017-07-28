@@ -9,16 +9,9 @@
         <div class="header">
           <span class="title">Please log in</span>
         </div>
-        <div class="captcha">
+        <div class="">
           {{ #random }}
             <img src="{{.}}">
-            <div class="choices">
-              <input type="radio" name="guess" id="yes" value="bill" />
-              <label for="yes">That's Bill Murray</label>
-              <input type="radio" name="guess" id="no" value="notbill" />
-              <label for="no">That's NOT Bill Murray</label>
-              <input type="hidden" name="displayedImg" value="{{.}}" />
-            </div>
           {{ /random }}
           <button>Log me in.</button>
         </div>
